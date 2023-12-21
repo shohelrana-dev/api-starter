@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2015"],
+        "target": "ES5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "outDir": "dist",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["./*"]
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["**/*.spec.ts"]
+}
