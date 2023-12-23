@@ -1,21 +1,29 @@
 {
     "compilerOptions": {
-        "lib": ["ES2015"],
-        "target": "ES5",
+        "target": "es6",
+        "lib": ["es6", "dom"],
+        "types": ["reflect-metadata"],
         "module": "commonjs",
         "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "outDir": "dist",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "noImplicitAny": true,
-        "strictNullChecks": true,
-        "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": true,
+        "suppressImplicitAnyIndexErrors": false,
+        "noResolve": false,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "esModuleInterop": true,
         "baseUrl": "src",
         "paths": {
-            "@/*": ["./*"]
+            "@/*": ["./*"],
+            "@modules/*": ["./api/v1/modules/*"],
+            "@utils/*": ["./api/v1/utils/*"]
         }
     },
-    "include": ["src/**/*"],
-    "exclude": ["**/*.spec.ts"]
+    "include": ["custom.d.ts", "src/**/*.ts", "src/**/*.json", ".env"],
+    "exclude": ["node_modules", "dist"]
 }

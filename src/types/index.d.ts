@@ -1,4 +1,4 @@
 export interface Auth {
     isAuthenticated: boolean
-    user: {}
+    user: any
 }
