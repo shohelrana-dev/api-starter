@@ -10,7 +10,7 @@ export default function errorMiddleware( error: HttpException, req: Request, res
 
     res.status( 500 ).json( {
         // @ts-ignore
-        message: error?.message || 'Unknown error occurred.',
+        message: error?.message || 'Unknown error has occurred.',
         statusCode: 500
     } )
 }
