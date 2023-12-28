@@ -1,9 +1,9 @@
 {
-  "name": "api-starter",
+  "name": "base-api",
   "version": "1.0.0",
   "description": "A boilerplate for api starting",
   "main": "main.ts",
-  "repository": "https://github.com/shohelrana-dev",
+  "repository": "https://github.com/shohelrana-dev/base-api",
   "author": "Shohel Rana",
   "license": "MIT",
   "private": true,
@@ -34,6 +34,7 @@
     "inversify": "^6.0.2",
     "inversify-express-utils": "^6.4.6",
     "jsonwebtoken": "^9.0.2",
+    "node-http-exceptions": "^1.0.1",
     "tslib": "^2.6.2"
   }
 }

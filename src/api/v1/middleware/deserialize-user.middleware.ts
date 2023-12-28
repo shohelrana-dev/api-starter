@@ -1,9 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
-import { Auth } from '@/types'
 
 export default async function deserializeUserMiddleware(
-    req: any,
+    req: Request,
     _: Response,
     next: NextFunction
 ) {
@@ -14,7 +13,7 @@ export default async function deserializeUserMiddleware(
     req.auth = {
         isAuthenticated: false,
         user: {},
-    } as Auth
+    }
 
     if (authorization) {
         jwt_token = authorization.split(' ')[1]
@@ -30,7 +29,7 @@ export default async function deserializeUserMiddleware(
         if (decoded) {
             //set authorised user
             req.auth.isAuthenticated = true
-            req.auth.user = {}
+            req.auth.user = decoded
         }
     } catch (err: any) {
         console.error('Error verifying JWT:', err.message)

@@ -1,21 +1,21 @@
 //dependencies
 import 'reflect-metadata'
-import express from 'express'
-import dotenv from 'dotenv'
-import cors from 'cors'
 import path from 'path'
+import cors from 'cors'
+import dotenv from 'dotenv'
 import morgan from 'morgan'
+import express from 'express'
 import { createServer } from 'http'
 import cookieParser from 'cookie-parser'
+import { errorMiddleware } from 'node-http-exceptions'
+import { notFoundMiddleware } from 'node-http-exceptions'
 import { InversifyExpressServer } from 'inversify-express-utils'
 
 //dotenv initialize
 dotenv.config()
 
 //internal import
-import deserializeUserMiddleware from '@/middleware/deserialize-user.middleware'
-import notFoundMiddleware from '@/middleware/not-found.middleware'
-import errorMiddleware from '@/middleware/error.middleware'
+import deserializeUserMiddleware from '@middleware/deserialize-user.middleware'
 import { container } from '@/config/inversify.config'
 
 const server = new InversifyExpressServer(container, undefined, {

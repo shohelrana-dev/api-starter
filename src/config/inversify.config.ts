@@ -1,5 +1,5 @@
 //import controllers
-import '@modules/controllers'
+import '@v1/controllers'
 
 import UserService from '@/api/v1/modules/users/user.sevice'
 import { Container } from 'inversify'

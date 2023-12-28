@@ -1,5 +1,5 @@
 declare namespace Express {
-    export interface Request {
+    interface Request {
         auth: {
             user?: any
             isAuthenticated: boolean
